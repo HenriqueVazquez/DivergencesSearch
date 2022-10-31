@@ -4,7 +4,7 @@
 /* eslint-disable no-console */
 export function GetTypeEmission(key?: any) {
   if (key) {
-    const getMod = key.substr(9, 11);
+    const getMod = key.substr(34, 36);
 
     const mod = parseInt(getMod.substr(0, 1));
 
