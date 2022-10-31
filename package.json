@@ -97,11 +97,12 @@
     "react-dropzone": "^14.2.3",
     "react-icons": "^4.6.0",
     "react-router-dom": "^6.3.0",
-    "react-toastify": "^9.0.8",
     "react-xml-parser": "^1.1.8",
+    "react-toastify": "^9.0.8",
     "xlsx": "^0.18.5"
   },
   "devDependencies": {
+    "@types/react-toastify": "^4.1.0",
     "@pmmmwh/react-refresh-webpack-plugin": "^0.5.7",
     "@svgr/webpack": "^6.3.1",
     "@teamsupercell/typings-for-css-modules-loader": "^2.5.1",
@@ -112,7 +113,6 @@
     "@types/react": "^18.0.17",
     "@types/react-dom": "^18.0.6",
     "@types/react-test-renderer": "^18.0.0",
-    "@types/react-toastify": "^4.1.0",
     "@types/terser-webpack-plugin": "^5.0.4",
     "@types/webpack-bundle-analyzer": "^4.4.2",
     "@typescript-eslint/eslint-plugin": "^5.33.1",
@@ -231,16 +231,27 @@
       "buildResources": "assets",
       "output": "release/build"
     },
-    "devEngines": {
-      "node": ">=14.x",
-      "npm": ">=7.x"
-    },
-    "electronmon": {
-      "patterns": [
-        "!**/**",
-        "src/main/**"
-      ],
-      "logLevel": "quiet"
+    "extraResources": [
+      "./assets/**"
+    ],
+    "publish": {
+      "provider": "github",
+      "owner": "electron-react-boilerplate",
+      "repo": "electron-react-boilerplate"
     }
+  },
+  "collective": {
+    "url": "https://opencollective.com/electron-react-boilerplate-594"
+  },
+  "devEngines": {
+    "node": ">=14.x",
+    "npm": ">=7.x"
+  },
+  "electronmon": {
+    "patterns": [
+      "!**/**",
+      "src/main/**"
+    ],
+    "logLevel": "quiet"
   }
 }
